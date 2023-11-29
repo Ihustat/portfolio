@@ -1,6 +1,6 @@
 import { Item } from './Item';
 
-export function ItemsList({ items }) {
+export function ItemsList({ items = [] }) {
   return (
     <>
       {items.map((item) => (
