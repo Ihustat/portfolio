@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import '../styles/item.css';
 import { Link } from 'react-router-dom';
 
-export function Item({ imgArray, title, descr, id }) {
+export function Item({ imgArray, title, descr, id, linkToProject }) {
   const backRef = useRef(null);
   function showBack() {
     backRef.current.classList.add('active');
@@ -17,11 +17,11 @@ export function Item({ imgArray, title, descr, id }) {
       <div className='card-image'>
         <div className='back' ref={backRef}>
           <Link to={`/projects/${id}`} className='back__link'>
-            Show project Descr
+            Показть описание
           </Link>
-          <a href='#' className='back__link'>
-            Show project
-          </a>
+          <Link to={linkToProject} target='_blank' className='back__link'>
+            Смотреть проект
+          </Link>
         </div>
         <img src={imgArray[0]} alt={title} />
       </div>

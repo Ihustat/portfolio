@@ -1,5 +1,7 @@
-.card-image {
+.card .card-image img {
   position: relative;
+  height: 170px;
+  object-fit: cover;
 }
 
 .back {
@@ -8,7 +10,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 5;
+  z-index: -1;
   transform: translateY(-100%);
   opacity: 0;
 
@@ -25,6 +27,7 @@
   opacity: 1;
   transform: translateY(0%);
   transition: all 0.3s;
+  z-index: 5;
 }
 
 .back__link {

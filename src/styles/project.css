@@ -13,10 +13,46 @@
 
 .project__img {
   max-width: 100%;
+  cursor: pointer;
+  object-fit: cover;
 }
 
 .project__buttons {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+.popup {
+  display: none;
+}
+
+.popup.popup_active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup.popup_active img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 768px) {
+  .project__line {
+    display: block;
+  }
+
+  .project__descr {
+    margin-top: 15px;
+  }
 }

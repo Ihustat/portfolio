@@ -1,9 +1,9 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { ItemsList } from '../components/ItemsList';
 import { DBContext } from '../context/DBContext';
 
 export function MainPage() {
-  const { projects, setProjects } = useContext(DBContext);
+  const { projects } = useContext(DBContext);
 
   return (
     <div className='main'>

@@ -1,0 +1,37 @@
+.header__icon {
+  width: 20px;
+  height: 20px;
+  transform: translate(-5px, 5px);
+}
+
+.nav-wrapper {
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  transform: translateY(-13px);
+}
+
+.nav__link {
+  color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 434px) {
+  .nav {
+    flex-direction: column;
+  }
+}
